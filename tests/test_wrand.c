@@ -18,6 +18,14 @@ int wr_gen_num() {}
 
 /* Tests */
 
+/* 
+ * Test case name: Seed generation
+ *   Steps:
+ *   - Get first seed value
+ *   - Check this value more 0
+ *   - Get second seed value
+ *   - Check first and second values differents
+ */
 static char*
 test_wr_get_seed() {
     wr_get_seed();
@@ -25,6 +33,15 @@ test_wr_get_seed() {
     return 0;
 }
 
+/* 
+ * Test case name: Check range generation
+ *   Steps:
+ *   - Set range 1-100
+ *   - Run cycle where generated 100 random values
+ *   - Each generated value check >=1 <=100
+ *   - Each error increment fail counter
+ *   - Check fail counter == 0
+ */
 static char*
 test_wr_set_range() {
     wr_set_range();
@@ -32,6 +49,15 @@ test_wr_set_range() {
     return 0;
 }
 
+/* 
+ * Test case name: Check random generations
+ *   Steps:
+ *   - Set range 0-9
+ *   - Run cycle where generated 100 random values
+ *   - Write 1 in array 0-9 element (this num generated 1 or more times)
+ *   - Summ all 1 in array
+ *   - Check counter >= 5 (this value may configure)
+ */
 static char*
 test_wr_gen_num() {
     wr_gen_num();

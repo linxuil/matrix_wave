@@ -34,7 +34,7 @@ wr_get_seed(void) {
     
     nbytes = getrandom(buffer, sizeof(buffer), 0);
     if (nbytes == -1) {
-        perror("Ошибка чтения из /dev/urandom с помощью getrandom()");
+        perror("Error read from /dev/urandom with getrandom()");
         exit(1);
     }
 

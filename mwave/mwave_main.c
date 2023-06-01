@@ -25,6 +25,8 @@
 #include <nuttx/config.h>
 #include <stdio.h>
 
+#include "src/wrand.h"
+
 /****************************************************************************
  * Public Functions
  ****************************************************************************/
@@ -35,6 +37,15 @@
 
 int main(int argc, FAR char *argv[])
 {
-  printf("MatrixWave - application skeleton work\n");
-  return 0;
+    printf("MatrixWave - application skeleton work\n");
+
+    wr.init();
+    wr.set_range(1, 100);
+
+    for (int i = 0; i < 10; ++i) {
+        int random_number = wr.gen_num();
+        printf("Random num: %d\n", random_number);
+    }
+
+    return 0;
 }

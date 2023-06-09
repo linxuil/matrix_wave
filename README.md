@@ -1,3 +1,7 @@
+<p align="center">
+    <img width="180" src="docs/logo.png" alt="Logo">
+</p>
+
 # MatrixWave
 
    `MatrixWave` is a solution for the RTOS `Nuttx`, the purpose is:
